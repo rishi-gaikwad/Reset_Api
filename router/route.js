@@ -7,7 +7,7 @@ const User = require("../Model/userSchema");
 
 
 // GET all users
-router.get('/',  async(req, res) => {
+router.get('/events',  async(req, res) => {
 
   try {
 
@@ -23,7 +23,7 @@ router.get('/',  async(req, res) => {
 
 // GET single users
 
-router.get('/:id',async (req,res)=>{
+router.get('/events/:id',async (req,res)=>{
 
   try {
 
@@ -44,7 +44,7 @@ router.get('/:id',async (req,res)=>{
 })
 
 // Post single user
-router.post('/',async (req,res)=>{
+router.post('/events',async (req,res)=>{
 
   try {
     const user = new User(req.body)
@@ -57,7 +57,7 @@ router.post('/',async (req,res)=>{
 
 
 // Edit User
-router.put('/:id',async (req,res)=>{
+router.put('/events/:id',async (req,res)=>{
 
   try {
     const _id = req.params.id;
@@ -72,7 +72,7 @@ res.send(updateUserData)
 })
 
 // Delete user
-router.delete('/:id',async (req,res)=>{
+router.delete('/events/:id',async (req,res)=>{
 
   try {
     const deleteUser = await User.findByIdAndDelete(req.params.id);
