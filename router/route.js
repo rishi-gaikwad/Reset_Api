@@ -7,7 +7,7 @@ const User = require("../Model/userSchema");
 
 
 // GET all users
-router.get('/', async(req, res) => {
+router.get('/',  async(req, res) => {
 
   try {
 
